@@ -18,7 +18,7 @@
                 <td><%= dose.ingredient.name %></td>
                 <td><%= dose.description %></td>
                 <td>
-                  <%= link_to cocktail_path(@cocktail.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } do %>
                     <i class="fa fa-trash destroy_dose"></i>
                   <% end %>
                 </td>
