@@ -18,7 +18,7 @@ class CocktailsController < ApplicationController
 
   def show
     id = params[:id].to_i
-    @cocktail = @cocktails[id]
+    @cocktail = @cocktails.find(id)
   end
 
   private

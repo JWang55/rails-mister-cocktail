@@ -22,11 +22,10 @@ recipes = JSON.parse(ingredients_raw)
 
 recipes.each do |recipe|
   puts recipe["name"]
-  Cocktail.create(name: recipe["name"])
+  coc = Cocktail.create(name: recipe["name"])
   recipe["ingredients"].each do |ingredient|
     puts ingredient["ingredient"]
-    Ingredient.create(name: ingredient["ingredient"])
-    # Dose.create(name: ingredient)
+    ing = Ingredient.create(name: ingredient["ingredient"])
   end
 end
 # puts ingredients
